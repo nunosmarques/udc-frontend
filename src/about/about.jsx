@@ -1,34 +1,46 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PageHeader from '../template/pageHeader';
+import Button from '../template/iconButton'
+import timestamp from 'time-stamp';
 
-export default props => (
-    <div>
-    <PageHeader name='Sobre' small='nós'></PageHeader>
-    <h2>Um pouco mais sobre nós...</h2>
-    <p>
-        Nulla laoreet consequat tristique. Fusce dictum ligula id est porta aliquam. Fusce nec sodales elit, 
-        id aliquam nunc. Nunc ut pulvinar urna. Sed nec lectus tempus, sollicitudin libero at, lacinia nibh. 
-        Nam condimentum mi sem, eget feugiat dui hendrerit eu. Nam vel condimentum diam, ut pellentesque ligula. 
-        In semper turpis orci, eu tincidunt est varius id. Etiam porttitor, enim id placerat dignissim, metus ante 
-        fringilla sapien, suscipit finibus arcu ligula eu purus.
-    </p>
+export default class About extends Component {
 
-    <h2>Missão e visão</h2>
-    <p>
-        Nulla laoreet consequat tristique. Fusce dictum ligula id est porta aliquam. Fusce nec sodales elit, 
-        id aliquam nunc. Nunc ut pulvinar urna. Sed nec lectus tempus, sollicitudin libero at, lacinia nibh. 
-        Nam condimentum mi sem, eget feugiat dui hendrerit eu. Nam vel condimentum diam, ut pellentesque ligula. 
-        In semper turpis orci, eu tincidunt est varius id. Etiam porttitor, enim id placerat dignissim, metus ante 
-        fringilla sapien, suscipit finibus arcu ligula eu purus.
-    </p>
+    test(){
+        alert('Hellow World!')
+    }
 
-    <h2>Imprensa</h2>
-    <p>
-        Nulla laoreet consequat tristique. Fusce dictum ligula id est porta aliquam. Fusce nec sodales elit, 
-        id aliquam nunc. Nunc ut pulvinar urna. Sed nec lectus tempus, sollicitudin libero at, lacinia nibh. 
-        Nam condimentum mi sem, eget feugiat dui hendrerit eu. Nam vel condimentum diam, ut pellentesque ligula. 
-        In semper turpis orci, eu tincidunt est varius id. Etiam porttitor, enim id placerat dignissim, metus ante 
-        fringilla sapien, suscipit finibus arcu ligula eu purus.
-    </p>
-</div>
-)
+    render(){
+        return (
+            <div>
+                <PageHeader name='Sobre' small='nós'></PageHeader>
+                <h2>Um pouco mais sobre nós... <Button hide={false} style='success' onClick={this.test} icon='address-card-o'></Button></h2>
+                
+                <p>
+                    Nulla laoreet consequat tristique. Fusce dictum ligula id est porta aliquam. Fusce nec sodales elit, 
+                    id aliquam nunc. Nunc ut pulvinar urna. Sed nec lectus tempus, sollicitudin libero at, lacinia nibh. 
+                    Nam condimentum mi sem, eget feugiat dui hendrerit eu. Nam vel condimentum diam, ut pellentesque ligula. 
+                    In semper turpis orci, eu tincidunt est varius id. Etiam porttitor, enim id placerat dignissim, metus ante 
+                    fringilla sapien, suscipit finibus arcu ligula eu purus.
+                </p>
+
+                <h2>Missão e visão</h2>
+                <p>
+                    Nulla laoreet consequat tristique. Fusce dictum ligula id est porta aliquam. Fusce nec sodales elit, 
+                    id aliquam nunc. Nunc ut pulvinar urna. Sed nec lectus tempus, sollicitudin libero at, lacinia nibh. 
+                    Nam condimentum mi sem, eget feugiat dui hendrerit eu. Nam vel condimentum diam, ut pellentesque ligula. 
+                    In semper turpis orci, eu tincidunt est varius id. Etiam porttitor, enim id placerat dignissim, metus ante 
+                    fringilla sapien, suscipit finibus arcu ligula eu purus.
+                </p>
+
+                <h2>Imprensa</h2>
+                <p>
+                    Nulla laoreet consequat tristique. Fusce dictum ligula id est porta aliquam. Fusce nec sodales elit, 
+                    id aliquam nunc. Nunc ut pulvinar urna. Sed nec lectus tempus, sollicitudin libero at, lacinia nibh. 
+                    Nam condimentum mi sem, eget feugiat dui hendrerit eu. Nam vel condimentum diam, ut pellentesque ligula. 
+                    In semper turpis orci, eu tincidunt est varius id. Etiam porttitor, enim id placerat dignissim, metus ante 
+                    fringilla sapien, suscipit finibus arcu ligula eu purus.
+                </p>
+            </div>
+        )
+    }
+}
